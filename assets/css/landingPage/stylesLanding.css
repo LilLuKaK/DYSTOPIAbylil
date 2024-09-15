@@ -1,0 +1,381 @@
+.imagen-fondo {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.imagen-fondo img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: auto;
+    max-width: 100%;
+    transition: transform 0.4s ease-out;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.imagen-fondo img:nth-child(2) {
+    top: 35%;
+    left: 55%;
+    width: 85%;
+    transform: translateX(-50%) rotate(4deg);
+    overflow: hidden;
+    z-index: 0;
+}
+
+.imagen-fondo.disabled img {
+    transition: none;
+}
+
+.periodico{
+    margin-top: 10%;
+}
+
+.periodico img {
+    width: 700px;
+    position: relative;
+    left: -650px;
+    visibility: hidden;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.periodico img.show {
+    animation: rollIn 1.5s forwards;
+    visibility: visible;
+}
+
+@keyframes rollIn {
+    0% {
+        left: -650px;
+        transform: rotate(-50deg);
+        visibility: hidden;
+    }
+    100% {
+        left: 30%;
+        top: 15%;
+        transform: rotate(-2deg);
+        visibility: visible;
+    }
+}
+
+.contenedorTienda{
+    background-image: url(../../../assets/images/landingPage/nieblaFondoPrueba2.png);
+    background-size: cover;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.contenedorTienda > img {
+    width: 100%;
+}
+
+.tienda{
+    background-image: url(../../../assets/images/landingPage/nieblaFondoPrueba2.png);
+    background-size: cover;
+    padding-top: 500px;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+}
+
+.tienda > p{
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+
+div#albumImages{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    z-index: 3;
+}
+
+.tiendaDentro{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.author-div {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.author-div > p {
+    font-size: 25px;
+    margin-bottom: 3px;
+    color: white;
+}
+
+.hr {
+    width: 100%;
+    border-bottom: 2px solid white;
+    box-shadow: 1px 2px 5px black;
+    margin-bottom: 10px;
+}
+
+.contenedor-album {
+    margin-left: 50px;
+    width: 200px;
+    height: 420px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.7));
+    display: flex;
+    flex-direction: column; /* Modificado para ajustar contenido */
+    justify-content: flex-start; /* Modificado para ajustar contenido */
+    float: left;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.contenedor-album img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.nombreAlbum {
+    font-size: 25px;
+    height: 90px;
+}
+
+.estrellas1 {
+    margin-bottom: 10px;
+}
+
+i {
+    width: 18px;
+    font-size: 17px;
+}
+
+.precioAlbum {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.buy-button {
+    all: unset;
+    position: relative;
+    letter-spacing: 1px;
+    color: #ffffff;
+    box-shadow: 0px 0px 0px 1px #0c121c;
+    border-radius: 8px;
+    border: 1px solid #ffffff60;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 1;
+    will-change: transform;
+    transition: all 0.25s ease-in-out;
+    font-size: 15px;
+}
+
+.buy-button::before {
+    position: absolute;
+    content: " ";
+    inset: 0;
+    background: linear-gradient(180deg, #ffffff30, #ffffff00);
+    transition: opacity 0.4s ease-in-out;
+    opacity: 0;
+    border-radius: 7px;
+    z-index: -1;
+}
+
+.buy-button:hover::before {
+    opacity: 1;
+}
+
+.buy-button:hover {
+    transform: scale(1.05);
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+    --glow-hue: 222deg;
+    --shadow-hue: 180deg;
+    --spring-easing: linear(
+    0, 0.002, 0.01 0.9%, 0.038 1.8%, 0.156, 0.312 5.8%, 0.789 11.1%, 1.015 14.2%,
+    1.096, 1.157, 1.199, 1.224 20.3%, 1.231, 1.231, 1.226, 1.214 24.6%,
+    1.176 26.9%, 1.057 32.6%, 1.007 35.5%, 0.984, 0.968, 0.956, 0.949 42%,
+    0.946 44.1%, 0.95 46.5%, 0.998 57.2%, 1.007, 1.011 63.3%, 1.012 68.3%,
+    0.998 84%, 1
+);
+    --spring-duration: 1.33s;
+}
+@property --shimmer {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 33deg;
+}
+
+@keyframes shimmer {
+    0% {
+        --shimmer: 0deg;
+    }
+    100% {
+        --shimmer: 360deg;
+    }
+}
+
+@keyframes shine {
+    0% {
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    55% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes text {
+    0% {
+        background-position: 100% center;
+    }    
+    100% {
+        background-position: -100% center;
+    }    
+}
+
+.botonTienda {
+    color: var(--bg);
+    font-weight: 600;
+    /*     background-image: linear-gradient(90deg, #fcecfe, #fbf6e7, #e6fcf5); */
+    background-color: rgba(0, 0, 0, .7);
+    padding: .8em 1.4em;
+    position: relative;
+    isolation: isolate;
+    box-shadow: 0 2px 3px 1px hsl(var(--glow-hue) 50% 20% / 50%), inset 0 -10px 20px -10px hsla(var(--shadow-hue),10%,90%,95%);
+    border-radius: 0.66em;
+    scale: 1;
+    transition: all var(--spring-duration) var(--spring-easing);
+    left: 47%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.botonTienda:hover:not(:active),
+.botonTienda.active {
+    transition-duration: calc(var(--spring-duration)*0.5);
+    scale: 1.2;
+    box-shadow: 0 4px 8px -2px hsl(var(--glow-hue) 50% 20% / 50%), inset 0 0 0 transparent;
+}
+.botonTienda:active {
+    scale: 1.1;
+    transition-duration: calc(var(--spring-duration)*0.5);
+}
+
+.shimmer {
+    position: absolute;
+    inset: -40px;
+    border-radius: inherit;
+    mask-image: conic-gradient(
+        from var(--shimmer, 0deg),
+        transparent 0%,
+        transparent 10%,
+        black 36%,
+        black 45%,
+        transparent 50%,
+        transparent 60%,
+        black 85%,
+        black 95%,
+        transparent 100%
+    );
+    mask-size: cover;
+    mix-blend-mode: plus-lighter;
+    animation: shimmer 1s linear infinite both;
+}
+.botonTienda:hover .shimmer::before,
+.botonTienda:hover .shimmer::after,
+.botonTienda.active .shimmer::before,
+.botonTienda.active .shimmer::after {
+    opacity: 1;
+    animation: shine 1.2s ease-in 1 forwards;
+}
+.shimmer::before,
+.shimmer::after {
+    transition: all 0.5s ease;
+    opacity: 0;
+    content: "";
+    border-radius: inherit;
+    position: absolute;
+    mix-blend-mode: color;
+    inset: 40px;
+    pointer-events: none;
+}
+.shimmer::before {
+    box-shadow: 0 0 3px 2px hsl(var(--glow-hue) 20% 95%),
+        0 0 7px 4px hsl(var(--glow-hue) 20% 80%),
+        0 0 13px 4px hsl(var(--glow-hue) 50% 70%),
+        0 0 25px 5px hsl(var(--glow-hue) 100% 70%);
+    z-index: -1;
+}
+
+.shimmer::after {
+    box-shadow: inset 0 0 0 1px hsl(var(--glow-hue) 70% 95%),
+        inset 0 0 2px 1px hsl(var(--glow-hue) 100% 80%),
+        inset 0 0 5px 2px hsl(var(--glow-hue) 100% 70%);
+    z-index: 2;
+}
+
+.botonTienda .text {
+    color: white;
+    background-clip: text;
+    background-color: var(--bg);
+    background-image: linear-gradient(120deg, transparent, hsla(var(--glow-hue),100%,80%,0.66) 40%, hsla(var(--glow-hue),100%,90%,.9) 50%, transparent 52%);
+    background-repeat: no-repeat;
+    background-size: 300% 300%;
+    background-position: center 200%;
+}
+
+.botonTienda:hover .text,
+.botonTienda.active .text {
+    animation: text .66s ease-in 1 both;
+}

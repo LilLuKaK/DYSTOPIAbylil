@@ -1,0 +1,138 @@
+@media (max-width: 1440px) {
+
+    .icon-sad {
+        font-size: 40px;
+    }
+
+    .icon-neutral {
+        font-size: 40px;
+    }
+
+    .icon-smile {
+        font-size: 40px;
+    }
+
+    .icon-cool {
+        font-size: 40px;
+    }
+
+    div#listaRedes > ul > li{
+        font-size: 15px;
+    }
+
+    div#contenedorInfo{
+        height: 420px;
+    }
+
+    div#contenedorForm {
+        height: 420px;
+    }
+
+    label, input, textarea {
+        width: 95%;
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    div#map{
+        height: 220px;
+    }
+
+    .icon-sad {
+        font-size: 40px;
+    }
+
+    .icon-neutral {
+        font-size: 40px;
+    }
+
+    .icon-smile {
+        font-size: 40px;
+    }
+
+    .icon-cool {
+        font-size: 40px;
+    }
+
+    label, input, textarea {
+        width: 94%;
+    }
+    
+}
+
+@media (max-width: 1024px) {
+
+    #contenedorContacto {
+        margin-top: 100px;
+    }
+
+    div#listaRedes > ul > li{
+        font-size: 28px;
+    }
+
+    div#listaRedes > ul > li > a > p{
+        display: none;
+    }
+
+    a#mostrarNormal{
+        display: none;
+    }
+    
+    a#mostrarResponsive{
+        display: block;
+    }
+
+    label, input, textarea {
+        width: 93%;
+    }
+
+}
+
+@media (max-width: 768px) {
+  
+    div#map{
+        height: 210px;
+    }
+
+    label, input, textarea {
+        width: 91%;
+    }
+
+    h2{
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+
+    label{
+        font-size: 20px;
+    }
+
+    textarea{
+        margin-bottom: 30px;
+    }
+
+}
+
+@media (max-width: 596px) {
+
+    div#contenedorInfo{
+        width: 90%;
+        margin-left: 5%;margin-right: 5%;
+    }
+
+    div#contenedorForm {
+        width: 90%;
+        margin-left: 5%;margin-right: 5%;
+    }
+    
+}
+
+@media (max-width: 320px) {
+
+    label, input, textarea {
+        width: 87%;
+    }
+
+}

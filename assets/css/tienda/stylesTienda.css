@@ -1,0 +1,57 @@
+.imagen-fondo {
+    width: 100%;
+    height: 55vh;
+    overflow: hidden;
+}
+
+.imagen-fondo img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: auto;
+    max-width: 100%;
+    transition: transform 0.4s ease-out;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.imagen-fondo img:nth-child(2) {
+    top: 15%;
+    left: 55%;
+    width: 85%;
+    transform: translateX(-50%) rotate(4deg);
+    overflow: hidden;
+    z-index: 0;
+}
+
+.imagen-fondo.disabled img {
+    transition: none;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.contenedorTiendaa{
+    position: relative;
+    width: 100%;
+    top: 30%;
+    background: rgba(0,0,0,.9);
+    background: linear-gradient(0deg, rgba(0,0,0,.95) 0%, rgba(0,0,0,.95) 90%, rgba(0,0,0,0) 100%);
+    height: 500px;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 60px;
+}
+
+.tienda{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+h1{
+    color: white;
+}

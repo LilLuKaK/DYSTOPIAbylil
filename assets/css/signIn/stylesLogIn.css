@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:wght@700&family=Lora:wght@500&display=swap');
+
+*, *::before, *::after{
+    padding: 0px;
+    margin: 0px;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 5px;
+    background-color: #333333;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #727272;
+}
+
+::selection {
+    background-color: #727272;
+    color: #333333;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    background-color: #FFF !important;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: white !important;
+}
+
+body{
+    font-family: 'Lora', sans-serif;
+    background-color: #040404;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-image: url(./../../images/register/travis.jpg);
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+    background-size: 30%;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+
+.contenedor{
+    margin: 5%;
+    position: relative;
+    width: 650px;
+    border: 2px solid #4d4d4d;
+    border-radius: 20px;
+    backdrop-filter: blur(3px);
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#icono {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#icono img {
+    width: 250px;
+}
+
+.contenedor h2{
+    font-size: 2.3rem;
+    color: #fff;
+    text-align: center;
+}
+
+.input-contenedor{
+    position: relative;
+    margin: 30px 0;
+    width: 100%;
+    border-bottom: 2px solid #4d4d4d;
+}
+
+.input-contenedor label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-65%);
+    color: white;
+    font-family: 'Arsenal', sans-serif;
+    font-size: 1.5rem;
+    pointer-events: none;
+    transition: .6s;
+    font-family: bold;
+}
+
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px;
+}
+
+.input-contenedor input{
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: - 35px 0 5px;
+    color: white;
+}
+
+.input-contenedor i{
+    position: absolute;
+    color: #fff;
+    font-size: 1.6rem;
+    top: 19px;
+    right: 8px;
+}
+
+.error-message{
+    width: 70%;
+    color: white;
+}
+
+.olvidar{
+    margin: 15px;
+    font-size: 16px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.olvidar label input{
+    margin: 3px;
+}
+
+.olvidar label a{
+    color: #4d4d4d;
+    text-decoration: none;
+    transition: .3s;
+    font-size: 16px;
+}
+
+.olvidar label a:hover{
+    text-decoration: underline;
+}
+
+.button{
+    width: 100%;
+    height: 45px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    font-size: 1rem;
+    transition: .4s;
+}
+
+.button:hover{
+    opacity: .9;
+}
+
+.registrar{
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    margin: 10px 0 10px;
+}
+
+.registrar p a{
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.registrar p a:hover{
+    text-decoration: underline;
+}
+
+/* Estilos del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+/* Estilos del botón de cerrar */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
